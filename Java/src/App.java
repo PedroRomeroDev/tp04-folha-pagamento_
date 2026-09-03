@@ -1,5 +1,11 @@
 public class App {
+
+    public static void header () {
+        System.out.println("=========================================");
+        System.out.println("==    SISTEMA DE CADASTRO FUNCIONARIO  ==");
+        System.out.println("=========================================");
+    }
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+        header();
     }
 }
