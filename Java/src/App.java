@@ -9,10 +9,8 @@ public class App {
     }
 
     public static void main(String[] args) throws Exception {
-        Scanner s = new Scanner(System.in);
-        header();
 
-        System.out.print("NOME DO FUNCIONARIO: ");
-        String nome = s.next();
+        header();
+        
     }
 }
