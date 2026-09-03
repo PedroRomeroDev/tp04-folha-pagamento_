@@ -30,6 +30,7 @@ public class App {
         double horasExtras;
         header();
 
+
         System.out.print("NOME DO FUNCIONARIO: ");
         String nome = s.next();
 
