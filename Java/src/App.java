@@ -8,10 +8,26 @@ public class App {
         System.out.println("=========================================");
     }
 
+    public static double calcularImposto(double salarioBruto) {
+        double inss = 14.0;
+        double ir = 27.0;
+        double desconto = salarioBruto * ((inss / 100.0) + (ir / 100.0));
+        double salarioLiquido = salarioBruto - desconto;
+        return salarioLiquido;
+    }
+
+    public static double horaextra(double horaextra){
+        double valorExtra = 0.00;
+        if (horaextra > 0) {
+            valorExtra = 5.00 * horaextra;
+        }
+        return valorExtra;
+    }
+
     public static void main(String[] args) throws Exception {
         Scanner s = new Scanner(System.in);
         double salarioBruto;
-        int horasExtras;
+        double horasExtras;
         header();
 
         System.out.print("NOME DO FUNCIONARIO: ");
@@ -27,5 +43,8 @@ public class App {
             horasExtras = s.nextInt();
         } while(horasExtras < 0);
 
+        double salarioLiquido = calcularImposto(salarioBruto);
+        salarioLiquido += horaextra(horasExtras);
+        System.out.print("Salario Liquido: " + salarioLiquido);
     }
 }
