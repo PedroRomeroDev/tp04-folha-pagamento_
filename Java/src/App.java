@@ -10,6 +10,12 @@ public class App {
 
             double inss = 14;
             double ir = 27;
+
+            if (horaextra > 0){
+
+                salarioLiquido + 50; 
+
+            }
         }
     }
 }
